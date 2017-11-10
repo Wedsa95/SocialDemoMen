@@ -13,18 +13,14 @@
 	<jsp:include page="/WEB-INF/template/nav.jsp"></jsp:include>
 	
 	<article>
-		This is the h
 		<br/>
-			<form action="login" method="POST">
-			<p>
-				UserName: <input type="text" name="username"/>
-				Password: <input type="password" name="password"/>
-			</p>
-			</form>
+			This is the h
 		<br/>
 		<br/>
+			This is news 
 		<br/>
 		<br/>
+			Whisky
 		<br/>
 		<br/>
 	</article>

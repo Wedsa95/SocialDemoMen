@@ -15,13 +15,15 @@
 				<label><a href="${item.path}">${item.name}</a></label>
 			</c:forEach>
 		</jsp:useBean>
-	</nav>
+		<%= session.getAttribute("username") %>
 	<form action="login" method="POST">
-		<p>
+		
 			UserName: <input type="text" name="username"/>
 			Password: <input type="password" name="password"/>
 			<input type="submit" value="Sam Sara" />
-		</p>
+		
 	</form>
+	</nav>
+	
 </body>
 </html>

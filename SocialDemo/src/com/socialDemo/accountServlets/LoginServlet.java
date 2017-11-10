@@ -1,4 +1,4 @@
-package com.socialDemo.loginServlets;
+package com.socialDemo.accountServlets;
 
 import java.io.IOException;
 

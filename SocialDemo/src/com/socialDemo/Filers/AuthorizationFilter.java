@@ -11,6 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebFilter(urlPatterns = {}, description = "Session Filter")
 public class AuthorizationFilter implements Filter{
@@ -29,14 +30,24 @@ public class AuthorizationFilter implements Filter{
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
 		
-		
-		
-		if(request.getRequestURI().endsWith("LOGGIN")&&
-				request.getSession().getAttribute("AUTHENTICATED")== null) {
+		String uri = request.getRequestURI();
+		this.filterConfig.getServletContext().log("Request ::"+ uri);
+		HttpSession session = request.getSession(false);
+
+		if(session == null && !(uri.endsWith("html") || uri.endsWith("LoginServlet"))) {
+			this.filterConfig.getServletContext().log("Unauthorized");
 			
-			response.sendRedirect(request.getContextPath() + "/LOGGIN");
+			response.sendRedirect("index.jsp");	
+		}else {
+			chain.doFilter(req, res);
 		}
-		chain.doFilter(req, res);
+		
+//		if(request.getRequestURI().endsWith("LOGGIN")&&
+//				request.getSession().getAttribute("AUTHENTICATED")== null) {
+//			
+//			response.sendRedirect(request.getContextPath() + "/LOGGIN");
+//		}
+//		chain.doFilter(req, res);
 	}
 	
 	@Override

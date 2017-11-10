@@ -1,4 +1,5 @@
+com\socialDemo\accountServlets\LoginServlet.class
 com\socialDemo\bean\Navigation$Item.class
 com\socialDemo\bean\Navigation.class
-com\socialDemo\loginServlets\LoginServlet.class
-com\socialDemo\loginServlets\ProfileServlet.class
+com\socialDemo\accountServlets\ProfileServlet.class
+com\socialDemo\Filers\AuthorizationFilter.class

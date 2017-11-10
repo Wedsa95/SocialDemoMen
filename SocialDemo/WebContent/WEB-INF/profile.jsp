@@ -9,8 +9,8 @@
 </head>
 <body>
 	<p>
-	${username}
-		Hi! <%= session.getAttribute("username") %>
+	
+		Hi! <%= session.getAttribute("username") %> <a href="/SocialDemo/index.jsp">${username}</a>
 	</p>
 	<p>
 		password: <%= session.getAttribute("isLoggedIn") %>
