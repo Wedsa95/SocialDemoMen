@@ -15,7 +15,7 @@
 				<label><a href="${item.path}">${item.name}</a></label>
 			</c:forEach>
 		</jsp:useBean>
-		<%= session.getAttribute("username") %>
+		<h4><%= session.getAttribute("username") %></h4>
 	<form action="login" method="POST">
 		
 			UserName: <input type="text" name="username"/>
