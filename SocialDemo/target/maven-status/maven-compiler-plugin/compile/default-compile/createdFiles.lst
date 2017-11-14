@@ -1,5 +1,8 @@
 com\socialDemo\accountServlets\LoginServlet.class
-com\socialDemo\bean\Navigation$Item.class
 com\socialDemo\bean\Navigation.class
 com\socialDemo\accountServlets\ProfileServlet.class
 com\socialDemo\filers\AuthorizationFilter.class
+com\socialDemo\bean\JDBCDatabase.class
+com\socialDemo\bean\Navigation$Item.class
+com\socialDemo\filers\AuthFilter.class
+com\socialDemo\listener\ContainerLifeListener.class

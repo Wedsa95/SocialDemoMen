@@ -1,4 +1,7 @@
 C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\bean\Navigation.java
+C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\filers\AuthFilter.java
 C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\accountServlets\LoginServlet.java
+C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\listener\ContainerLifeListener.java
 C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\filers\AuthorizationFilter.java
 C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\accountServlets\ProfileServlet.java
+C:\Users\Jonas\git\SocialDemoMen\SocialDemo\src\com\socialDemo\bean\JDBCDatabase.java

@@ -21,7 +21,7 @@
 			UserName: <input type="text" name="username"/>
 			Password: <input type="password" name="password"/>
 			<input type="submit" value="Sam Sara" />
-		
+		<label style="color: green">${param.error}</label>
 	</form>
 	</nav>
 	

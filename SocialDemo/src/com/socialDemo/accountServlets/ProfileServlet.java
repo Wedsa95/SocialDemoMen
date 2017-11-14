@@ -19,20 +19,24 @@ public class ProfileServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		
-		Object pass = session.getAttribute("isLoggedIn");
+		String userName = (String) session.getAttribute("username");
 		
-		if(pass != null && (boolean) pass) {
-			String userName = (String) session.getAttribute("username");
-			
-			req.setAttribute("username", userName);
-			
-			req.getRequestDispatcher("/WEB-INF/profile.jsp").forward(req, res);
-		}else {
-			res.setContentType("text/html");
-			res.getWriter().print("Not logged in yet \n"
-					+ "<a href=\"index.jsp\">Return</a>");
-		}
+		req.setAttribute("username", userName);
 		
+		req.getRequestDispatcher("/WEB-INF/profile.jsp").forward(req, res);
+		
+//		Object pass = session.getAttribute("isLoggedIn");
+//		
+//		if(pass != null && (boolean) pass) {
+//			String userName = (String) session.getAttribute("username");
+//			
+//			req.setAttribute("username", userName);
+//			
+//			req.getRequestDispatcher("/WEB-INF/profile.jsp").forward(req, res);
+//		}else {
+//			throw new ServletException("Not logged in yet \n");		
+//		}
+//		
 //		if(session.isNew()) {
 //			session.setAttribute("username", userName);
 //			session.setAttribute("password", password);
