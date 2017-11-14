@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style><%@include file="WEB-INF/css/mainStyle.css"%></style>
+<style><%@include file="/resources/css/mainStyle.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Social Demo Men</title>
 </head>
