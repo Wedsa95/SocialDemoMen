@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf151068588539710" configfile="/SocialDemo/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf151068588539710" configfile="/SocialDemo/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="SocialDemo_login_line.xhtml" x="122" y="370" id="pf15107343252310" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15107343252321 pf15107343252322" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="WEB-INF/profile.xhtml" x="338" y="178" id="pf15107343252323" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15107343252321" path="/WEB-INF/profile.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="562" id="pf15107343252324" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf15107343252322" path="index.xhtml"/>
+  <links id="pf15107343252321" target="pf15107343252323" source="pf15107343252310" outcome="t"/>
+  <links id="pf15107343252322" target="pf15107343252324" source="pf15107343252310" outcome="f"/>
+</pageflow:Pageflow>

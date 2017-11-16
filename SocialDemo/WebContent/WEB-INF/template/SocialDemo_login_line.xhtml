@@ -5,9 +5,16 @@
 		xmlns:f="http://xmlns.jcp.org/jsf/core">
 <body>
 	<h:form>
-		<h:inputText id="username" value="#{inlogg.userName}"/>
-		<h:inputSecret id="password" value="#{inlogg.password}"/>
-		<h:commandButton value="Login" action="#{inlogg.login}"/>
+	<h:panelGrid columns="2">
+		<h:messages />
+		User Name:<h:inputText id="username" value="#{inLoggController.userName}"
+		 required="true" requiredMessage="Please type in your Username"/>
+<!-- 		 <h:message for="username"/> -->
+		Password:<h:inputSecret id="password" value="#{inLoggController.password}"
+		 required="true" requiredMessage="Please type in your Password"/>
+<!-- 		 <h:message for="password" /> -->
+		<h:commandButton action="/profile.xhtml" value="Login"/>
+	</h:panelGrid>
 	</h:form>
 </body>
 </html>

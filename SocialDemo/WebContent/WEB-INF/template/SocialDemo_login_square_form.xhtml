@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://xmlns.jcp.org/jsf/html"
+		xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<style>
+	.error{
+		color:lime;		
+	}
+</style>
+</head>
+<body>
+	<h:form>
+		<h:messages styleClass="error" />
+			<h:inputText id="username" value="#{inlogg.userName}" required="true"
+			requiredMessage="UserName Plz"/>
+			<h:message for="username" styleClass="error"/>
+		<br/>
+			<h:inputSecret id="password" value="#{inlogg.password}" required="true"
+			requiredMessage="Pass Plz"/>
+			<h:message for="password" styleClass="error"/>
+		<br/>
+		<br/>
+			<h:inputTextarea id="frase" value="#{greatings.message}" ></h:inputTextarea>
+		<br/>
+		<br/>
+			<h:selectOneMenu id="food" value="#{inlogg.food}">
+				<f:selectItems value="#{inlogg.foodOpions}"/>
+			</h:selectOneMenu>
+		<br/>
+		<br/>
+			<h:selectManyCheckbox value="#{inlogg.favoritLanguages}">
+				<f:selectItems value="#{inlogg.langugeOptions}"/>
+			</h:selectManyCheckbox>
+		<br/>
+		<br/>
+			sick?:<h:selectBooleanCheckbox value="#{inlogg.sick}"/>
+		<br/>
+		<br/>
+			<h:commandButton value="Login" action="/profile.xhtml"/>
+	</h:form>
+</body>
+</html>

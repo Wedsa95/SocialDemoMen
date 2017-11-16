@@ -3,32 +3,27 @@ package com.socialDemo.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
-
-@ApplicationScoped
-@Named("navigation")
-public class Navigation {
+public class NavigationJsp {
 
 	private List<Item> items; 
-
-	public Navigation() {
+	
+	public NavigationJsp() {
 		items = new ArrayList<>();
-		items.add(new Item("Home" ,"index.xhtml"));
-		items.add(new Item("Profile" ,"profile.xhtml"));
-		items.add(new Item("Chat" ,"conversation.xhtml"));
-		items.add(new Item("Help" ,"help.xhtml"));
+		items.add(new Item("Profile" ,"profile"));
+		items.add(new Item("Home" ,"home.jsp"));
+		items.add(new Item("Conversation" ,"convers.jsp"));
+		items.add(new Item("Help" ,"help.jsp"));
 	}
-
+	
 
 	public List<Item> getItems() {
 		return items;
 	}
-
+	
 	public class Item {
 		private String name; 
 		private String path;
-
+		
 		public Item(String name, String path) {
 			this.name = name;
 			this.path = path;
@@ -50,6 +45,5 @@ public class Navigation {
 			this.path = path;
 		}
 	}
-
+	
 }
-
