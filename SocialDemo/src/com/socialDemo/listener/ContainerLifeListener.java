@@ -27,27 +27,27 @@ public class ContainerLifeListener implements ServletContextListener {
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
     public void contextDestroyed(ServletContextEvent e)  { 
-    	ServletContext context = e.getServletContext();
-    	JDBCDatabase database = (JDBCDatabase) context.getAttribute("database");
-    	
-    	try {
-    		database.getConnection().close();
-    	}catch(SQLException exc) {
-    		exc.printStackTrace();
-    	}
+//    	ServletContext context = e.getServletContext();
+//    	JDBCDatabase database = (JDBCDatabase) context.getAttribute("database");
+//    	
+//    	try {
+//    		database.getConnection().close();
+//    	}catch(SQLException exc) {
+//    		exc.printStackTrace();
+//    	}
     }
 
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent e)  { 
-    	JDBCDatabase database = new JDBCDatabase();
-    	
-    	ServletContext context = e.getServletContext();
-    	
-    	context.setAttribute("database", database);
-    	
-    	
+//    	JDBCDatabase database = new JDBCDatabase();
+//    	
+//    	ServletContext context = e.getServletContext();
+//    	
+//    	context.setAttribute("database", database);
+//    	
+//    	
     }
 	
 }

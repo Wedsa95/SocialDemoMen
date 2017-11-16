@@ -6,7 +6,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name="inlogg")
-public class Inlogg {
+public class DumStuff {
 
 	private String userName;
 	private String password;
@@ -17,7 +17,7 @@ public class Inlogg {
 	private List<String> foodOpions;
 	private List<String> langugeOptions;
 	
-	public Inlogg() {
+	public DumStuff() {
 		foodOpions = new ArrayList<>();
 		foodOpions.add("Pizzza pie");
 		foodOpions.add("Cheees");

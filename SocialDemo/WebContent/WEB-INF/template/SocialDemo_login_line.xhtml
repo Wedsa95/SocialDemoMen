@@ -5,7 +5,7 @@
 		xmlns:f="http://xmlns.jcp.org/jsf/core">
 <body>
 	<h:form>
-	<h:panelGrid columns="2">
+	
 		<h:messages />
 		User Name:<h:inputText id="username" value="#{inLoggController.userName}"
 		 required="true" requiredMessage="Please type in your Username"/>
@@ -14,7 +14,7 @@
 		 required="true" requiredMessage="Please type in your Password"/>
 <!-- 		 <h:message for="password" /> -->
 		<h:commandButton action="/profile.xhtml" value="Login"/>
-	</h:panelGrid>
+
 	</h:form>
 </body>
 </html>

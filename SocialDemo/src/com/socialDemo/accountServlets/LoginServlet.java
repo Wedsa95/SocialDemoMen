@@ -29,40 +29,40 @@ public class LoginServlet extends HttpServlet{
 		String userName = req.getParameter("username");
 		String password = req.getParameter("password");
 		
-		if(isValidCredetials(userName, password)) {
-			HttpSession session = req.getSession();
-			session.setAttribute("username", userName);
-			session.setAttribute("isLoggedIn", true);
-			session.setMaxInactiveInterval(30);
-			
-			res.sendRedirect("profile");
-		}else {
-			res.setContentType("text/html");
-			res.getWriter().print("Not logged in yet \n"
-					+ "<a href=\"index.jsp\">Return</a>");
-			throw new ServletException();
-		}
+//		if(isValidCredetials(userName, password)) {
+//			HttpSession session = req.getSession();
+//			session.setAttribute("username", userName);
+//			session.setAttribute("isLoggedIn", true);
+//			session.setMaxInactiveInterval(30);
+//			
+//			res.sendRedirect("profile");
+//		}else {
+//			res.setContentType("text/html");
+//			res.getWriter().print("Not logged in yet \n"
+//					+ "<a href=\"index.jsp\">Return</a>");
+//			throw new ServletException();
+//		}
 		
 	}
-	public boolean isValidCredetials(String userName, String password) {
-		JDBCDatabase database = (JDBCDatabase) getServletContext().getAttribute("database");
-		Connection connection = database.getConnection();
-		
-		try {
-			PreparedStatement prep = connection.prepareStatement("SELECT * FROM logins WHERE "
-					+ "username=? AND password=?");
-			prep.setString(1, userName);
-			prep.setString(2, password);
-			
-			ResultSet resultSet = prep.executeQuery();
-			
-			return resultSet.next();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return false;
-	}
+//	public boolean isValidCredetials(String userName, String password) {
+//		JDBCDatabase database = (JDBCDatabase) getServletContext().getAttribute("database");
+//		Connection connection = database.getConnection();
+//		
+//		try {
+//			PreparedStatement prep = connection.prepareStatement("SELECT * FROM logins WHERE "
+//					+ "username=? AND password=?");
+//			prep.setString(1, userName);
+//			prep.setString(2, password);
+//			
+//			ResultSet resultSet = prep.executeQuery();
+//			
+//			return resultSet.next();
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		return false;
+//	}
 
 }

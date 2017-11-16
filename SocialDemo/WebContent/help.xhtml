@@ -6,7 +6,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <ui:composition template="WEB-INF/template/SocialDemo_template.xhtml">
-	<ui:define name="login_line" />
+	<ui:define name="login_square" />
 	<ui:define name="content">
 	<br/>
 	    <ul>
@@ -15,6 +15,25 @@
 	    	<li>Contact Us</li>
 	    </ul>
 	<br/>
+		<br/>
+			<h:outputLabel>#{greatings.message}</h:outputLabel>
+			<br/>
+	    	<h:outputLabel>#{inlogg.userName}</h:outputLabel>
+	    	<br/>
+			<br/>
+	    	<h:outputLabel>#{inlogg.password}</h:outputLabel>
+	    	<br/>
+			<br/>
+	    	<h:outputLabel>#{inlogg.food}</h:outputLabel>
+	    	<br/>
+			<br/>
+			<h:outputLabel>#{inlogg.sick}</h:outputLabel>
+	    	<br/>
+			<br/>
+			<ui:repeat var="tempLanguages" value="#{inlogg.favoritLanguages}">
+				<li>#{tempLanguages}</li>
+			</ui:repeat>
+	    <br/>
 	</ui:define>
 </ui:composition>
 </html>

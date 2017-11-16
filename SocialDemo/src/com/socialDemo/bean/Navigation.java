@@ -18,6 +18,7 @@ public class Navigation {
 		items.add(new Item("Profile" ,"profile.xhtml"));
 		items.add(new Item("Chat" ,"conversation.xhtml"));
 		items.add(new Item("Help" ,"help.xhtml"));
+		items.add(new Item("calc" ,"calc.xhtml"));
 	}
 
 
@@ -26,6 +27,7 @@ public class Navigation {
 	}
 
 	public class Item {
+		
 		private String name; 
 		private String path;
 

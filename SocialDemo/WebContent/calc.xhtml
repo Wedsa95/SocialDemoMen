@@ -6,12 +6,16 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <ui:composition template="WEB-INF/template/SocialDemo_template.xhtml">
-	<ui:define name="login_square"></ui:define>
+	<ui:define name="login_square">
+	</ui:define>
 	<ui:define name="content">
 		<br/>
-			<h:outputLabel>#{userManager.currentUser}</h:outputLabel>
+			<h:panelGrid columns="3" >
+				<ui:repeat var="val" value="#{calcButtonOptions.symbols}">
+					<h:button value="#{val}" />
+				</ui:repeat>
+			</h:panelGrid>	
 		<br/>
 	</ui:define>
-	
 </ui:composition>
 </html>
